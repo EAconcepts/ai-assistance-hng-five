@@ -8,8 +8,8 @@ import Assistance from './components/Assistance'
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AssistantProvider>
-      <Assistance/>
       <App />
+      <Assistance />
     </AssistantProvider>
   </React.StrictMode>
 );
