@@ -3,7 +3,6 @@ import { useAssistant } from './components/AssistantContext';
 
 function Home() {
 const {clearAssistant, triggerPopup} = useAssistant()
-  const ref = useRef(null)
  
  const buttons = [
    { name: "Button 1", content: "This button goes to the Dashboard" },
@@ -26,23 +25,20 @@ const handleMouseOver = (e) => {
   }
   return (
     <div className="w-full relative flex flex-col">
-      <div className="flex justify-around mt-20 ">
-        <button
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-          className="rounded-lg py-3 px-5 border"
-        >
-          Button 1
-        </button>
-        <button
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-          className="rounded-lg py-3 px-5 border"
-        >
-          Button 2
-        </button>
+    
+      <div className="w-full mt-24 px-5 grid grid-cols-2 gap-32">
+        {buttons.map((btn) => (
+          <button
+            aria-label={btn.content}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+            className="w-fit rounded-lg py-3 px-5 border uppercase font-medium"
+          >
+            {btn.name}
+          </button>
+        ))}
       </div>
-      <div className="flex justify-around mt-40 gap-4">
+      {/* <div className="flex justify-around mt-40 gap-4">
         <button
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
@@ -58,7 +54,7 @@ const handleMouseOver = (e) => {
           {" "}
           button 4
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

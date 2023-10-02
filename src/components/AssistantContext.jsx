@@ -9,7 +9,7 @@ export const AssistantProvider = ({ children }) => {
     setPosition(position);
   }, []);
   const clearAssistant = useCallback(() => {
-    setContent(null), setPosition({ x: "100vw", y: "100vh" });
+    setContent(null), setPosition({ x: "0vw", y: "80vh" });
   }, []);
   return (
     <AssistantContext.Provider
