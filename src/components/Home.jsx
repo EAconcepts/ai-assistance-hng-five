@@ -1,5 +1,5 @@
 import {useRef, useEffect} from 'react'
-import { useAssistant } from './components/AssistantContext';
+import { useAssistant } from './AssistantContext';
 
 function Home() {
 const {clearAssistant, triggerPopup} = useAssistant()
