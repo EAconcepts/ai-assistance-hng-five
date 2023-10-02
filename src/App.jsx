@@ -1,19 +1,12 @@
+import React from 'react'
+import Home from './home'
 
-
-function Assistance() {
-
+const App = () => {
   return (
-    <div className="w-full flex flex-col">
-     <div className="flex justify-around mt-10 ">
-      <button>Button 1</button>
-      <button>Button 2</button>
-     </div>
-     <div>
-      <button> button 3</button>
-      <button> button 4</button>
-     </div>
+    <div className='relative text-white bg-slate-700 h-screen'>
+        <Home/>
     </div>
-  );
+  )
 }
 
-export default Assistance
+export default App

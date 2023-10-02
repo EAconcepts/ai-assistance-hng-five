@@ -4,7 +4,7 @@ import robot1 from '../assets/robot1.png'
 const Assistance = () => {
     const {content, position, clearAssistant } = useAssistant()
   return (
-    <div className='bg-green-400 w-[10rem] h-[10rem] absolute transform -translate-x-[100] -translate-y-[100]' style={{
+    <div className='bg-green-400 h-[10rem] absolute transform -translate-x-[100] -translate-y-[100]' style={{
         top: position.y,
         left: position.x,
         position: 'absolute',
