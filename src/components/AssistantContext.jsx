@@ -3,7 +3,7 @@ const AssistantContext = createContext(null);
 
 export const AssistantProvider = ({ children }) => {
   const [content, setContent] = useState(null);
-  const [position, setPosition] = useState({ x: "100vw", y: "100vh" });
+  const [position, setPosition] = useState({ x: "0vw", y: "80vh" });
   const triggerPopup = useCallback((content, position) => {
     setContent(content);
     setPosition(position);
